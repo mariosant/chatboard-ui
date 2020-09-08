@@ -1,4 +1,12 @@
-import { createRouter } from '@storeon/router'
+import { createRouter, routerKey } from '@storeon/router'
+
+export interface State {
+	[routerKey]: {
+		path: string,
+		params: string[],
+		match: { page: string; params: any }
+	}
+}
 
 const router = createRouter([
 	['/', () => ({ page: 'homepage' })],

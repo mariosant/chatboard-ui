@@ -1,4 +1,4 @@
-import { theme as defaultTheme } from '@app/components/mod.jsx'
+import { theme as defaultTheme } from 'app/components'
 
 const theme = {
 	...defaultTheme,

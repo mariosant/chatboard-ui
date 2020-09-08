@@ -1,21 +1,20 @@
 import React from 'react'
 import loadable from '@loadable/component'
-import pMin from 'p-min-delay'
-import useRouter from '@app/hooks/useRouter.js'
+import useRouter from 'app/hooks/useRouter'
 
-const Fallback = () => 'loading...'
+const Fallback = () => <>loading...</>
 
 const AsyncPage = loadable(
-	(props) => pMin(import(`./pages/${props.page}/mod.js`), 500),
+	(props: any) => import(`./pages/${props.page}/index.js`),
 	{
-		cacheKey: (props) => props.page,
+		cacheKey: (props: any) => props.page,
 		fallback: <Fallback />,
 	},
 )
 
 const Routes = () => {
 	const [route] = useRouter()
-
+	
 	return <AsyncPage page={route.match.page} />
 }
 
