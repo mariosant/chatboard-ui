@@ -15,3 +15,5 @@ const createServer = () => {
 
 	return server
 }
+
+export default createServer

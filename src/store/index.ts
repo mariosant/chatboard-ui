@@ -1,7 +1,7 @@
 import { createElement } from 'react'
-import { createStoreon, StoreonModule} from 'storeon'
+import { createStoreon } from 'storeon'
 import { StoreContext } from 'storeon/react'
-import router, {State as RouterState} from './router'
+import router, { State as RouterState } from './router'
 
 // const { SNOWPACK_PUBLIC_PRODUCTION } = import.meta.env
 

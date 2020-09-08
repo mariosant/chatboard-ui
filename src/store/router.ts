@@ -2,8 +2,8 @@ import { createRouter, routerKey } from '@storeon/router'
 
 export interface State {
 	[routerKey]: {
-		path: string,
-		params: string[],
+		path: string
+		params: string[]
 		match: { page: string; params: any }
 	}
 }

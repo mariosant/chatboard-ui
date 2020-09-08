@@ -8,10 +8,11 @@ const useRouter = () => {
 	const replace = (url: string) => window.location.replace(url)
 
 	return [route, { push, replace }] as [
-		typeof route, {
-			push: typeof push,
+		typeof route,
+		{
+			push: typeof push
 			replace: typeof replace
-		}
+		},
 	]
 }
 

@@ -3,8 +3,8 @@
 		"start": "snowpack dev",
 		"build": "snowpack build",
 		"test": "jest",
-		"format": "prettier --write \"**/*.{js,jsx,md,json}\"",
-		"lint": "prettier --check \"**/*.{js,jsx,md,json}\""
+		"format": "prettier --write \"**/*.{js,jsx,md,json,ts,tsx}\"",
+		"lint": "prettier --check \"**/*.{js,jsx,md,json,ts,tsx}\""
 	},
 	"dependencies": {
 		"@chakra-ui/core": "^0.8.0",

@@ -1,8 +1,14 @@
 import React from 'react'
-import { CSSReset, ThemeProvider, Helmet } from 'app/components'
+import { CSSReset, ThemeProvider, Helmet, Split, Box } from 'app/components'
 import { StoreProvider } from 'app/store'
 import theme from 'app/theme'
 import Routes from 'app/routes'
+
+const TempSidebar = () => (
+	<Box height="100%" width={240} bg="gray.600">
+		lala
+	</Box>
+)
 
 export default () => (
 	<React.StrictMode>
@@ -13,7 +19,12 @@ export default () => (
 				</Helmet>
 				<CSSReset />
 				<StoreProvider>
-					<Routes />
+					<Split>
+						<TempSidebar />
+						<Box flexGrow={1} overflow="auto">
+							<Routes />
+						</Box>
+					</Split>
 				</StoreProvider>
 			</>
 		</ThemeProvider>

@@ -9,6 +9,9 @@ const theme = {
 			'"Cabin",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif',
 		mono: 'Menlo, monospace',
 	},
+	colors: {
+		...defaultTheme.colors,
+	},
 }
 
 export default theme
