@@ -1,8 +1,9 @@
-import { createRouter } from '@storeon/router';
+import { createRouter } from '@storeon/router'
 
 const router = createRouter([
-  ['/', () => ({ page: 'homepage' })],
-  ['/dashboards/*', (id) => ({ page: 'dashboards', params: { id } })],
-]);
+	['/', () => ({ page: 'homepage' })],
+	['/dashboards/*', (id) => ({ page: 'dashboards', params: { id } })],
+	['*', () => ({ page: 'not-found' })],
+])
 
-export default router;
+export default router

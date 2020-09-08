@@ -2,7 +2,7 @@ import React from 'react'
 
 const Page = () => (
 	<div>
-		Dashboards <a href="/">go to home</a>
+		Not found <a href="/">Go to home</a>
 	</div>
 )
 
