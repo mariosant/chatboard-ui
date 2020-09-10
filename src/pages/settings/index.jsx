@@ -2,7 +2,7 @@ import React from 'react'
 
 const Page = () => (
 	<div>
-		Not found
+		Settings
 	</div>
 )
 

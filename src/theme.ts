@@ -11,6 +11,7 @@ const theme = {
 	},
 	colors: {
 		...defaultTheme.colors,
+		brand: defaultTheme.colors.blue['400'],
 	},
 }
 
