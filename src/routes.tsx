@@ -6,10 +6,10 @@ const Fallback = () => <>loading...</>
 
 const AsyncPage = loadable(
 	(props: any) => {
-        console.log(props)
-        
-        return import(`./pages/${props.page}/index.js`)
-    },
+		console.log(props)
+
+		return import(`./pages/${props.page}/index.js`)
+	},
 	{
 		cacheKey: (props: any) => props.page,
 		fallback: <Fallback />,

@@ -7,6 +7,9 @@ import {
 	Box,
 	Sidebar,
 	Image,
+	Heading,
+	Text,
+	Stack,
 } from 'app/components'
 import { StoreProvider } from 'app/store'
 import theme from 'app/theme'
@@ -14,9 +17,9 @@ import Routes from 'app/routes'
 import useRouter from 'app/hooks/useRouter'
 
 const Navigation = () => {
-    const [route] = useRouter()
-    
-    const isActive = (page: string) => page === route.match.page
+	const [route] = useRouter()
+
+	const isActive = (page: string) => page === route.match.page
 
 	return (
 		<Sidebar.Container>
@@ -26,22 +29,50 @@ const Navigation = () => {
 				objectFit="cover"
 				bg="white"
 			/>
-            
-			<Sidebar.NavLink active={isActive('dashboard')} href="/dashboards/a/" icon="info-outline">
+
+			<Sidebar.NavLink
+				active={isActive('dashboard')}
+				href="/dashboards/a/"
+				icon="info-outline"
+			>
 				Dashboard
 			</Sidebar.NavLink>
 
-			<Sidebar.NavLink active={isActive('chats')} href="/dashboards/a/chats" icon="chat">
+			<Sidebar.NavLink
+				active={isActive('chats')}
+				href="/dashboards/a/chats"
+				icon="chat"
+			>
 				Chats
 			</Sidebar.NavLink>
 
-			<Sidebar.NavLink active={isActive('settings')} href="/dashboards/a/settings" icon="settings">
+			<Sidebar.NavLink
+				active={isActive('settings')}
+				href="/dashboards/a/settings"
+				icon="settings"
+			>
 				Settings
 			</Sidebar.NavLink>
 
-            <Sidebar.NavLink href="/" icon="arrow-back">
+			<Sidebar.NavLink href="/" icon="arrow-back">
 				Back to overview
 			</Sidebar.NavLink>
+
+			<Box flexGrow={1}></Box>
+
+			<Stack
+				p={2}
+				color="white"
+				bg="rgba(255, 255, 255, 0.1)"
+				borderRadius={4}
+				spacing={2}
+			>
+				<Heading size="md" fontWeight={100}>
+					Lorem Kristin inc
+				</Heading>
+				<Text>Generic English</Text>
+				<Text>Generic French</Text>
+			</Stack>
 		</Sidebar.Container>
 	)
 }

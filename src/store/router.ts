@@ -10,9 +10,18 @@ export interface State {
 
 const router = createRouter([
 	['/', () => ({ page: 'overview' })],
-	['/dashboards/*/chats', (dashboardId) => ({ page: 'chats', params: { dashboardId } })],
-	['/dashboards/*/settings', (dashboardId) => ({ page: 'settings', params: { dashboardId } })],
-	[/^dashboards\/(\w+)/, (dashboardId) => ({ page: 'dashboard', params: { dashboardId } })],
+	[
+		'/dashboards/*/chats',
+		(dashboardId) => ({ page: 'chats', params: { dashboardId } }),
+	],
+	[
+		'/dashboards/*/settings',
+		(dashboardId) => ({ page: 'settings', params: { dashboardId } }),
+	],
+	[
+		/^dashboards\/(\w+)/,
+		(dashboardId) => ({ page: 'dashboard', params: { dashboardId } }),
+	],
 	['*', () => ({ page: 'not-found' })],
 ])
 
