@@ -1,12 +1,12 @@
 import React from 'react'
 import { Stack, Link, LinkProps, Icon } from 'app/components'
 
-export interface NavLinkProps extends LinkProps {
+export interface SidebarNavLinkProps extends LinkProps {
 	active?: boolean
 	icon: string
 }
 
-const NavLink: React.FC<NavLinkProps> = (props) => (
+export const SidebarNavLink: React.FC<SidebarNavLinkProps> = (props) => (
 	<Link
 		bg={props.active ? 'brand' : 'transparent'}
 		color="white"
@@ -25,7 +25,7 @@ const NavLink: React.FC<NavLinkProps> = (props) => (
 	</Link>
 )
 
-const Container: React.FC = (props) => (
+export const SidebarContainer: React.FC = (props) => (
 	<Stack
 		height="100%"
 		width={240}
@@ -37,8 +37,3 @@ const Container: React.FC = (props) => (
 		{props.children}
 	</Stack>
 )
-
-export default {
-	Container,
-	NavLink,
-}

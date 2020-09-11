@@ -1,5 +1,7 @@
 export * from '@chakra-ui/core'
 export * from 'react-helmet'
 
-export { default as Split } from './Split'
-export { default as Sidebar } from './Sidebar'
+export * from './Split'
+export * from './Sidebar'
+export * from './Card'
+export * from './PageHeading'

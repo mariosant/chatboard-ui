@@ -5,7 +5,8 @@ import {
 	Helmet,
 	Split,
 	Box,
-	Sidebar,
+	SidebarNavLink,
+	SidebarContainer,
 	Image,
 	Heading,
 	Text,
@@ -22,7 +23,7 @@ const Navigation = () => {
 	const isActive = (page: string) => page === route.match.page
 
 	return (
-		<Sidebar.Container>
+		<SidebarContainer>
 			<Image
 				src="https://logoipsum.com/logo/logo-10.svg"
 				height={75}
@@ -30,33 +31,33 @@ const Navigation = () => {
 				bg="white"
 			/>
 
-			<Sidebar.NavLink
+			<SidebarNavLink
 				active={isActive('dashboard')}
 				href="/dashboards/a/"
 				icon="info-outline"
 			>
 				Dashboard
-			</Sidebar.NavLink>
+			</SidebarNavLink>
 
-			<Sidebar.NavLink
+			<SidebarNavLink
 				active={isActive('chats')}
 				href="/dashboards/a/chats"
 				icon="chat"
 			>
 				Chats
-			</Sidebar.NavLink>
+			</SidebarNavLink>
 
-			<Sidebar.NavLink
+			<SidebarNavLink
 				active={isActive('settings')}
 				href="/dashboards/a/settings"
 				icon="settings"
 			>
 				Settings
-			</Sidebar.NavLink>
+			</SidebarNavLink>
 
-			<Sidebar.NavLink href="/" icon="arrow-back">
+			<SidebarNavLink href="/" icon="arrow-back">
 				Back to overview
-			</Sidebar.NavLink>
+			</SidebarNavLink>
 
 			<Box flexGrow={1}></Box>
 
@@ -73,7 +74,7 @@ const Navigation = () => {
 				<Text>Generic English</Text>
 				<Text>Generic French</Text>
 			</Stack>
-		</Sidebar.Container>
+		</SidebarContainer>
 	)
 }
 

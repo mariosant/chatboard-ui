@@ -15,8 +15,6 @@
 			"app/*": ["./src/*"]
 		},
 		"jsx": "react",
-		"esModuleInterop": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true
+		"strict": true
 	}
 }
